@@ -4,18 +4,17 @@ name: Java CI with Maven
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
   pull_request:
 
 
 env:
-  AZURE_WEBAPP_NAME: afkl-test  # set this to your application's name
+  AZURE_WEBAPP_NAME: petclinic-afkl  # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: ${{ github.workspace }} # set this to the path to your web app project
   JAVA_VERSION: '1.8'                
 
 
 jobs:
-  build:
+  build-and-deploy:
 
     runs-on: ubuntu-latest
 
