@@ -60,10 +60,6 @@ jobs:
           name: Package
           path: ~/
 
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: ~/
-
       - name: Deploy Azure WebApp
         uses: Azure/webapps-deploy@v2
         with:
